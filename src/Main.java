@@ -1,5 +1,4 @@
 import entities.Product;
-
 import java.util.Locale;
 import java.util.Scanner;
 
@@ -16,13 +15,14 @@ public class Main {
 
         //Cadastro de produtos
         System.out.println("Enter  product data");
-        System.out.println("Name");
+        System.out.print("Name: ");
         product.name = scanner.nextLine();
         System.out.print("Price:");
         product.price = scanner.nextDouble();
         System.out.println("Quantity in stock:");
         product.quantity = scanner.nextInt();
 
+        System.out.println(product.toString());
 
     }
 }

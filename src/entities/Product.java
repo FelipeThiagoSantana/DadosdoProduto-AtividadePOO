@@ -7,16 +7,29 @@ public class Product {
 
     //Calculo de valor em estoque
     public double totalValueInStock(){
+
         return  price * quantity;
     }
     //Adicionado adicionando itens no estoque
     public void addProducts(int quantity){
+
         this.quantity += quantity;
     }
 
     //Removendo itens
     public void removeProducts(int quantity){
         this.quantity -= quantity;
+    }
+
+    public String toString(){
+        return name
+                +", $"
+                +String.format("%.2f", price)
+                +", "
+                +quantity
+                +" units, Total: $"
+                +String.format("%.2f", totalValueInStock());
+
     }
 
 
