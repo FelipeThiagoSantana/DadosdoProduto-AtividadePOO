@@ -7,22 +7,24 @@ public class Main {
     public static void main(String[] args) {
         Locale.setDefault(Locale.US);
         int quantity;
-
+        String name;
+        double price;
         Scanner scanner =new Scanner(System.in);
-        //Instanciando product
-        Product product = new Product();
 
 
         //Cadastro de produtos
         System.out.println("Enter  product data");
         System.out.print("Name: ");
-        product.name = scanner.nextLine();
+        name = scanner.nextLine();
 
         System.out.print("Price:");
-        product.price = scanner.nextDouble();
+        price = scanner.nextDouble();
 
         System.out.println("Quantity in stock:");
-        product.quantity = scanner.nextInt();
+        quantity = scanner.nextInt();
+
+        //Chamando o Construtor
+        Product product = new Product(name,price,quantity);
 
         System.out.println();
         System.out.println("Product data: "+product);
@@ -30,7 +32,7 @@ public class Main {
         //Adicionando produto no estoque
         System.out.println();
         System.out.print("Enter the number of product to be added in stock: ");
-         quantity = scanner.nextInt();
+        quantity = scanner.nextInt();
         product.addProducts(quantity);
 
         //Atualizando o produto
