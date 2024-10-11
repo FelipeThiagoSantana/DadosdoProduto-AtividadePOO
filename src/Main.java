@@ -20,11 +20,8 @@ public class Main {
         System.out.print("Price:");
         price = scanner.nextDouble();
 
-        System.out.println("Quantity in stock:");
-        quantity = scanner.nextInt();
-
         //Chamando o Construtor
-        Product product = new Product(name,price,quantity);
+        Product product = new Product(name,price);
 
         System.out.println();
         System.out.println("Product data: "+product);

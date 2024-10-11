@@ -13,6 +13,13 @@ public class Product {
         this.quantity = quantity;
     }
 
+    //Sobrecarga de metodos
+    public Product(String name, double price){
+        this.name = name;
+        this.price = price;
+    }
+
+
     //Calculo de valor em estoque
     public double totalValueInStock(){
 
